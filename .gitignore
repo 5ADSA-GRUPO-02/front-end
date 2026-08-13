@@ -1,23 +1,120 @@
+# .gitignore atualizado
+# Mantém o repositório limpo de dependências, builds e arquivos sensíveis
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Expo / React Native
+.expo/
+.expo-shared/
+android/
+ios/
+ios/Pods/
+android/.gradle/
+android/app/build/
+android/app/*.keystore
+
+# Build outputs
+build/
+dist/
+web-build/
+
+# Gradle
+.gradle/
+gradle/
+local.properties
+android/local.properties
+
+# Xcode
+*.xcworkspace
+*.xcuserstate
+DerivedData/
+ios/build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage and caches
+coverage/
+.nyc_output/
+jest-cache/
+/.cache/
+metro-cache/
+
+# Certificates and signing
+*.keystore
+*.jks
+*.p12
+*.pem
+*.pfx
+
+# Misc
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+__pycache__/
+*.sqlite
+
+# Sentry / crash reporting
+sentry.properties
+
+# Expo credentials
+credentials.json
+
+# Storybook
+storybook-static/
+
+# Keep any necessary examples or templates in the repo
+!.env.example
+
+# (Opções específicas antigas - mantidas apenas por segurança)
+# Entradas antigas do template AL para Dynamics 365 (se aplicável)
+# Se não precisar, pode remover este bloco
 ### AL ###
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder
-.vscode/
+#.vscode/
 #Cache folder
-.alcache/
+#.alcache/
 #Symbols folder
-.alpackages/
+#.alpackages/
 #Snapshots folder
-.snapshots/
+#.snapshots/
 #Testing Output folder
-.output/
+#.output/
 #Extension App-file
-*.app
+#*.app
 #Rapid Application Development File
-rad.json
+#rad.json
 #Translation Base-file
-*.g.xlf
+#*.g.xlf
 #License-files
-*.bclicense
-*.flf
+#*.bclicense
+#*.flf
 #Test results file
-TestResults.xml
+#TestResults.xml
