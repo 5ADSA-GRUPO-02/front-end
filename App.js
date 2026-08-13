@@ -1,21 +1,2 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+export { default } from './src/app/App';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <Text>HemoConnect</Text>
-      <StatusBar style="dark" />
-    </View>
-  );r
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
