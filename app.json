@@ -2,35 +2,22 @@
   "expo": {
     "name": "hemoconnect",
     "slug": "hemoconnect",
+    "scheme": "hemoconnect",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": false,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "newArchEnabled": true,
     "ios": {
-      "bundleIdentifier": "com.hemoconnect.app",
-      "supportsTablet": true
+      "bundleIdentifier": "com.hemoconnect.ios"
     },
     "android": {
-      "package": "com.hemoconnect.app",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+      "package": "com.hemoconnect.app"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "1f3ca594-db58-4c35-accc-021a45061796"
-      }
-    }
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.883597232344-eb1a6bh3iih0r8ucgpttfitp9icppi21"
+        }
+      ]
+    ]
   }
 }

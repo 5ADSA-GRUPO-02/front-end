@@ -8,8 +8,8 @@ export default function HemoConnect() {
       <Text style={styles.description}>
         Um aplicativo para conectar doadores de sangue a quem precisa
       </Text>
-      <Link style={styles.botao} href="/components/login-auth">Login</Link>
-      <Link style={styles.botao} href="/components/registro">Registro</Link>
+      <Link style={styles.botao} href="/login">Login</Link>
+      <Link style={styles.botao} href="/registro">Registro</Link>
     </View>
   );
 }
