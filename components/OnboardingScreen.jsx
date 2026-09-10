@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from "react-native";
 import { MaterialCommunityIcons, FontAwesome5, Ionicons } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const { width, height } = Dimensions.get("window");
 
@@ -113,7 +114,7 @@ export default function OnboardingScreen({ onFinish }) {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F4F7FA" />
 
 
@@ -156,7 +157,7 @@ export default function OnboardingScreen({ onFinish }) {
           </Text>
         </Pressable>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -312,7 +313,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 8,
     elevation: 4,
-    marginBottom: 25, 
+
   },
   actionButtonPressed: {
     opacity: 0.88,

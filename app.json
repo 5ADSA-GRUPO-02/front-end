@@ -28,7 +28,13 @@
     },
     "plugins": [
       "expo-router",
-      "expo-status-bar"
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permita o HemoConnect acessar a câmera para escanear QR codes de doação."
+        }
+      ]
     ]
   }
 }

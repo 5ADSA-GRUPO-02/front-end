@@ -29,3 +29,13 @@ npx expo install --fix
 
 npx expo start -c
 
+
+
+
+### Para aplicar uma configuração de camera:
+npx expo install expo-camera
+
+### Para aplicar uma configuração de audio:
+npx expo install expo-audio
+
+

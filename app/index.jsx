@@ -34,11 +34,11 @@ export default function LoginScreen() {
   }
 
 
-  const handleLogin = () => {
+  const logar = () => {
     router.replace("/tab");
   };
 
-  const handleGoogleLogin = () => {
+  const googleLogin = () => {
     Alert.alert(
       "Google Login",
       "Autenticação com Google conectando...",
@@ -46,7 +46,7 @@ export default function LoginScreen() {
     );
   };
 
-  const handleForgotPassword = () => {
+  const esqueceuSenha = () => {
     Alert.alert(
       "Recuperar Senha",
       "Enviaremos um link de recuperação para seu e-mail cadastrado."
@@ -140,6 +140,7 @@ export default function LoginScreen() {
                 <TextInput
                   style={styles.passwordInput}
                   placeholder="••••••••"
+                  secureTextEntry={true}
                   placeholderTextColor="#94A3B8"
                   autoCapitalize="none"
                   autoCorrect={false}
@@ -158,7 +159,7 @@ export default function LoginScreen() {
             </View>
 
             <Pressable
-              onPress={handleForgotPassword}
+              onPress={esqueceuSenha}
               style={styles.forgotPasswordButton}
             >
               <Text style={styles.forgotPasswordText}>Esqueceu a senha?</Text>
@@ -169,7 +170,7 @@ export default function LoginScreen() {
                 styles.buttonPrimary,
                 pressed && styles.buttonPressed,
               ]}
-              onPress={handleLogin}
+              onPress={logar}
             >
               <Text style={styles.buttonPrimaryText}>Entrar</Text>
             </Pressable>
@@ -178,7 +179,7 @@ export default function LoginScreen() {
                 styles.buttonGoogle,
                 pressed && styles.buttonGooglePressed,
               ]}
-              onPress={handleGoogleLogin}
+              onPress={googleLogin}
             >
               <Image
                   source={{

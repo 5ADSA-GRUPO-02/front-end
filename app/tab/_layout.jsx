@@ -4,13 +4,19 @@ import { Ionicons } from "@expo/vector-icons";
 export default function TabRotas(){
 
     return(
-        <Tabs>
+        <Tabs
+            screenOptions={{
+                headerShown: false,
+                tabBarActiveTintColor: "#A72730",
+                tabBarInactiveTintColor: "#64748B",
+            }}
+        >
             <Tabs.Screen
                 name="index"
                 options={{
                     title: 'Início',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="home" size={size} color={color} />
+                        <Ionicons name="home-outline" size={size} color={color} />
                     ),
                 }}
             />
@@ -19,25 +25,25 @@ export default function TabRotas(){
                 options={{
                     title: 'Mapa',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="map" size={size} color={color} />
+                        <Ionicons name="location-outline" size={size} color={color} />
                     ),
                 }}
             />
             <Tabs.Screen
                 name="camera"
                 options={{
-                    title: 'Camera',
+                    title: 'Escanear',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="camera" size={size} color={color} />
+                        <Ionicons name="scan-outline" size={size} color={color} />
                     ),
                 }}
             />
             <Tabs.Screen
                 name="chatbot"
                 options={{
-                    title: 'Chatbot',
+                    title: 'Chat',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="chatbubbles" size={size} color={color} />
+                        <Ionicons name="chatbubble-outline" size={size} color={color} />
                     ),
                 }}
             />
@@ -46,7 +52,7 @@ export default function TabRotas(){
                 options={{
                     title: 'Perfil',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="person" size={size} color={color} />
+                        <Ionicons name="person-outline" size={size} color={color} />
                     ),
                 }}
             />
