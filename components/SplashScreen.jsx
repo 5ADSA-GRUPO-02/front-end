@@ -7,7 +7,7 @@ export default function SplashScreen({ onFinish }) {
   const scaleAnim = useRef(new Animated.Value(0.92)).current;
 
   useEffect(() => {
-    // Animação suave de entrada
+
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
@@ -22,7 +22,6 @@ export default function SplashScreen({ onFinish }) {
       }),
     ]).start();
 
-    // Transiciona após 2.4 segundos
     const timer = setTimeout(() => {
       Animated.timing(fadeAnim, {
         toValue: 0,
@@ -47,18 +46,14 @@ export default function SplashScreen({ onFinish }) {
           },
         ]}
       >
-        {/* Ícone Centralizado em Card Arredondado */}
         <View style={styles.iconCard}>
           <MaterialCommunityIcons name="heart-pulse" size={54} color="#A72730" />
         </View>
-
-        {/* Nome da Marca */}
         <View style={styles.logoRow}>
           <Text style={styles.logoHemo}>Hemo</Text>
           <Text style={styles.logoConnect}>Connect</Text>
         </View>
 
-        {/* Slogan */}
         <Text style={styles.slogan}>Conectando pessoas. Salvando vidas.</Text>
       </Animated.View>
     </View>
@@ -81,7 +76,7 @@ const styles = StyleSheet.create({
     width: 104,
     height: 104,
     borderRadius: 28,
-    backgroundColor: "#FCECEF", // Tom suave rosa/vinho idêntico à referência
+    backgroundColor: "#FCECEF", 
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 26,

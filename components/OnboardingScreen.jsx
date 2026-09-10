@@ -68,35 +68,25 @@ export default function OnboardingScreen({ onFinish }) {
       case "ambulance":
         return (
           <View style={styles.illustrationWrapper}>
-            <View style={styles.bubbleCircle} />
-            <View style={styles.smallAccentDot} />
             <FontAwesome5 name="ambulance" size={68} color="#A72730" />
           </View>
         );
       case "location":
         return (
           <View style={styles.illustrationWrapper}>
-            <View style={styles.mapPinBackground}>
-              <View style={styles.pinHeartBubble}>
-                <Ionicons name="heart" size={16} color="#A72730" />
-              </View>
               <MaterialCommunityIcons
                 name="map-marker-outline"
                 size={70}
                 color="#1D3557"
               />
-            </View>
+           
           </View>
         );
       case "connection":
         return (
           <View style={styles.illustrationWrapper}>
-            <View style={styles.bubbleCircle} />
-            {/* Gota de Sangue no topo */}
-            <View style={styles.bloodDropBadge}>
-              <Ionicons name="water" size={20} color="#A72730" />
+            <View>
             </View>
-            {/* Coração estilizado com batimento */}
             <MaterialCommunityIcons
               name="heart-pulse"
               size={76}
@@ -111,12 +101,10 @@ export default function OnboardingScreen({ onFinish }) {
 
   const renderSlide = ({ item }) => (
     <View style={styles.slideContainer}>
-      {/* Card Ilustrativo Superior */}
       <View style={styles.card}>
         {renderIllustration(item.type)}
       </View>
 
-      {/* Conteúdo Textual */}
       <View style={styles.textContainer}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.description}>{item.description}</Text>
@@ -128,18 +116,7 @@ export default function OnboardingScreen({ onFinish }) {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F4F7FA" />
 
-      {/* Botão de Pular no Topo */}
-      <View style={styles.header}>
-        {currentIndex < SLIDES.length - 1 ? (
-          <Pressable onPress={handleSkip} style={styles.skipButton} hitSlop={15}>
-            <Text style={styles.skipText}>Pular</Text>
-          </Pressable>
-        ) : (
-          <View style={{ height: 24 }} />
-        )}
-      </View>
 
-      {/* Carrossel de Slides */}
       <FlatList
         ref={flatListRef}
         data={SLIDES}
@@ -154,9 +131,7 @@ export default function OnboardingScreen({ onFinish }) {
         contentContainerStyle={styles.flatListContent}
       />
 
-      {/* Rodapé: Indicadores de Página + Botão */}
       <View style={styles.footer}>
-        {/* Dots de Paginação */}
         <View style={styles.pagination}>
           {SLIDES.map((_, index) => (
             <View
@@ -169,7 +144,6 @@ export default function OnboardingScreen({ onFinish }) {
           ))}
         </View>
 
-        {/* Botão Principal */}
         <Pressable
           style={({ pressed }) => [
             styles.actionButton,
@@ -245,7 +219,7 @@ const styles = StyleSheet.create({
     width: 128,
     height: 128,
     borderRadius: 64,
-    backgroundColor: "#FCECEF", // Tom suave rosado do design
+    backgroundColor: "#FCECEF", 
   },
   smallAccentDot: {
     position: "absolute",
@@ -320,16 +294,16 @@ const styles = StyleSheet.create({
   },
   activeDot: {
     width: 24,
-    backgroundColor: "#A72730", // Vermelho Hemo ativo
+    backgroundColor: "#A72730", 
   },
   inactiveDot: {
     width: 7,
-    backgroundColor: "#CBD5E1", // Cinza inativo
+    backgroundColor: "#CBD5E1", 
   },
   actionButton: {
     width: "100%",
     height: 52,
-    backgroundColor: "#1D3557", // Azul Marinho
+    backgroundColor: "#1D3557", 
     borderRadius: 14,
     justifyContent: "center",
     alignItems: "center",
@@ -338,15 +312,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 8,
     elevation: 4,
+    marginBottom: 25, 
   },
   actionButtonPressed: {
     opacity: 0.88,
-    transform: [{ scale: 0.99 }],
+    transform: [{ scale: 0.99 }], 
   },
   actionButtonText: {
     color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "700",
     letterSpacing: 0.2,
+    paddingBottom: 4
   },
 });
