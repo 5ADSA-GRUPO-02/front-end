@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
 # dependencies
+=======
+# Dependências
+>>>>>>> migration/tsx-to-jsx
 node_modules/
 
 # Expo
 .expo/
+<<<<<<< HEAD
+=======
+.expo-shared/
+>>>>>>> migration/tsx-to-jsx
 dist/
 web-build/
 expo-env.d.ts
 
+<<<<<<< HEAD
 # Native
 .kotlin/
 *.orig.*
@@ -41,3 +50,46 @@ example
 # generated native folders
 /ios
 /android
+=======
+# Variáveis de Ambiente (Segurança)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de Sistema Operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Chaves de segurança e assinaturas (Android / iOS)
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.keystore
+*.mobileprovision
+>>>>>>> migration/tsx-to-jsx
